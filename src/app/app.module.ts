@@ -40,6 +40,7 @@ import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { CategoryComponent } from './views/category/category.component';
 import { DocsComponentsModule } from "../components/docs-components.module";
 import { HttpClientModule } from '@angular/common/http';
+import { OrganizationComponent } from './views/organization/organization.component';
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
@@ -47,7 +48,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, ...APP_CONTAINERS, CategoryComponent],
+    declarations: [AppComponent, ...APP_CONTAINERS, CategoryComponent, OrganizationComponent],
     providers: [
         {
             provide: LocationStrategy,
@@ -58,6 +59,7 @@ const APP_CONTAINERS = [
     ],
     bootstrap: [AppComponent],
     imports: [
+        IconModule,
         BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,

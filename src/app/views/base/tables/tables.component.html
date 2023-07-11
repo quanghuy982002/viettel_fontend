@@ -12,17 +12,16 @@
           Using the most basic table CoreUI, here&#39;s how <code>cTable</code>-based
           tables look in CoreUI.
         </p>
-        <app-docs-example href="components/table">
-          <table cTable>
-            <thead>
+        <table cTable>
+          <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Class</th>
               <th scope="col">Heading</th>
               <th scope="col">Heading</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             <tr>
               <th scope="row">1</th>
               <td>Mark</td>
@@ -40,9 +39,8 @@
               <td colSpan="2">Larry the Bird</td>
               <td>@twitter</td>
             </tr>
-            </tbody>
-          </table>
-        </app-docs-example>
+          </tbody>
+        </table>
       </c-card-body>
     </c-card>
   </c-col>
@@ -58,58 +56,58 @@
         <app-docs-example href="components/table#variants">
           <table cTable>
             <thead>
-            <tr>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">Default</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="primary">
-              <th scope="row">Primary</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="secondary">
-              <th scope="row">Secondary</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="success">
-              <th scope="row">Success</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="danger">
-              <th scope="row">Danger</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="warning">
-              <th scope="row">Warning</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="info">
-              <th scope="row">Info</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="light">
-              <th scope="row">Light</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
-            <tr cTableColor="dark">
-              <th scope="row">Dark</th>
-              <td>Cell</td>
-              <td>Cell</td>
-            </tr>
+              <tr>
+                <th scope="row">Default</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="primary">
+                <th scope="row">Primary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="secondary">
+                <th scope="row">Secondary</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="success">
+                <th scope="row">Success</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="danger">
+                <th scope="row">Danger</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="warning">
+                <th scope="row">Warning</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="info">
+                <th scope="row">Info</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="light">
+                <th scope="row">Light</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr cTableColor="dark">
+                <th scope="row">Dark</th>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -123,36 +121,37 @@
       </c-card-header>
       <c-card-body>
         <p class="text-medium-emphasis small">
-          Use <code>striped</code> property to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.
+          Use <code>striped</code> property to add zebra-striping to any table row within the
+          <code>&lt;tbody&gt;</code>.
         </p>
         <app-docs-example href="components/table#striped-rows">
           <table [striped]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -162,62 +161,62 @@
         <app-docs-example href="components/table#striped-rows">
           <table [striped]="true" cTable color="dark">
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#striped-rows">
           <table [striped]="true" cTable color="success">
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -236,31 +235,31 @@
         <app-docs-example href="components/table#striped-columns">
           <table stripedColumns cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -280,93 +279,93 @@
         <app-docs-example href="components/table#hoverable-rows">
           <table [hover]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#hoverable-rows">
           <table [hover]="true" cTable color="dark">
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#hoverable-rows">
           <table [hover]="true" [striped]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -382,66 +381,66 @@
         <app-docs-example href="components/table#active-tables">
           <table cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr cTableActive>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td cTableActive colSpan="2">
-                Larry the Bird
-              </td>
-              <td>@twitter</td>
-            </tr>
+              <tr cTableActive>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td cTableActive colSpan="2">
+                  Larry the Bird
+                </td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#active-tables">
           <table cTable color="dark">
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr cTableActive>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td cTableActive colSpan="2">
-                Larry the Bird
-              </td>
-              <td>@twitter</td>
-            </tr>
+              <tr cTableActive>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td cTableActive colSpan="2">
+                  Larry the Bird
+                </td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -460,31 +459,31 @@
         <app-docs-example href="components/table#bordered-tables">
           <table [bordered]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -496,31 +495,31 @@
         <app-docs-example href="components/table#bordered-tables">
           <table [bordered]="true" [cBorder]="1" borderColor="primary" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -539,62 +538,62 @@
         <app-docs-example href="components/table#tables-without-borders">
           <table [borderless]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#tables-without-borders">
           <table borderless cTable color="dark">
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -614,31 +613,31 @@
         <app-docs-example href="components/table#small-tables">
           <table [small]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -660,68 +659,68 @@
         <app-docs-example href="components/table#vertical-alignment">
           <table [responsive]="true" cAlign="middle" cTable>
             <thead>
-            <tr>
-              <th class="w-25" scope="col">
-                Heading 1
-              </th>
-              <th class="w-25" scope="col">
-                Heading 2
-              </th>
-              <th class="w-25" scope="col">
-                Heading 3
-              </th>
-              <th class="w-25" scope="col">
-                Heading 4
-              </th>
-            </tr>
+              <tr>
+                <th class="w-25" scope="col">
+                  Heading 1
+                </th>
+                <th class="w-25" scope="col">
+                  Heading 2
+                </th>
+                <th class="w-25" scope="col">
+                  Heading 3
+                </th>
+                <th class="w-25" scope="col">
+                  Heading 4
+                </th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>
-                This cell inherits <code>vertical-align: middle;</code> from the table
-              </td>
-              <td>
-                This cell inherits <code>vertical-align: middle;</code> from the table
-              </td>
-              <td>
-                This cell inherits <code>vertical-align: middle;</code> from the table
-              </td>
-              <td>
-                This here is some placeholder text, intended to take up quite a bit of
-                vertical space, to demonstrate how the vertical alignment works in the
-                preceding cells.
-              </td>
-            </tr>
-            <tr cAlign="bottom">
-              <td>
-                This cell inherits <code>vertical-align: bottom;</code> from the table row
-              </td>
-              <td>
-                This cell inherits <code>vertical-align: bottom;</code> from the table row
-              </td>
-              <td>
-                This cell inherits <code>vertical-align: bottom;</code> from the table row
-              </td>
-              <td>
-                This here is some placeholder text, intended to take up quite a bit of
-                vertical space, to demonstrate how the vertical alignment works in the
-                preceding cells.
-              </td>
-            </tr>
-            <tr>
-              <td>
-                This cell inherits <code>vertical-align: middle;</code> from the table
-              </td>
-              <td>
-                This cell inherits <code>vertical-align: middle;</code> from the table
-              </td>
-              <td cAlign="top">This cell is aligned to the top.</td>
-              <td>
-                This here is some placeholder text, intended to take up quite a bit of
-                vertical space, to demonsCTableRowate how the vertical alignment works in the
-                preceding cells.
-              </td>
-            </tr>
+              <tr>
+                <td>
+                  This cell inherits <code>vertical-align: middle;</code> from the table
+                </td>
+                <td>
+                  This cell inherits <code>vertical-align: middle;</code> from the table
+                </td>
+                <td>
+                  This cell inherits <code>vertical-align: middle;</code> from the table
+                </td>
+                <td>
+                  This here is some placeholder text, intended to take up quite a bit of
+                  vertical space, to demonstrate how the vertical alignment works in the
+                  preceding cells.
+                </td>
+              </tr>
+              <tr cAlign="bottom">
+                <td>
+                  This cell inherits <code>vertical-align: bottom;</code> from the table row
+                </td>
+                <td>
+                  This cell inherits <code>vertical-align: bottom;</code> from the table row
+                </td>
+                <td>
+                  This cell inherits <code>vertical-align: bottom;</code> from the table row
+                </td>
+                <td>
+                  This here is some placeholder text, intended to take up quite a bit of
+                  vertical space, to demonstrate how the vertical alignment works in the
+                  preceding cells.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  This cell inherits <code>vertical-align: middle;</code> from the table
+                </td>
+                <td>
+                  This cell inherits <code>vertical-align: middle;</code> from the table
+                </td>
+                <td cAlign="top">This cell is aligned to the top.</td>
+                <td>
+                  This here is some placeholder text, intended to take up quite a bit of
+                  vertical space, to demonsCTableRowate how the vertical alignment works in the
+                  preceding cells.
+                </td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -740,55 +739,55 @@
         <app-docs-example href="components/table#nesting">
           <table [striped]="true" cTable>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th colSpan="4">
-                <table cTable>
-                  <thead>
-                  <tr>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                    <th scope="col">Header</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <th scope="row">A</th>
-                    <td>First</td>
-                    <td>Last</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">B</th>
-                    <td>First</td>
-                    <td>Last</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">C</th>
-                    <td>First</td>
-                    <td>Last</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </th>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th colSpan="4">
+                  <table cTable>
+                    <thead>
+                      <tr>
+                        <th scope="col">Header</th>
+                        <th scope="col">Header</th>
+                        <th scope="col">Header</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">A</th>
+                        <td>First</td>
+                        <td>Last</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">B</th>
+                        <td>First</td>
+                        <td>Last</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">C</th>
+                        <td>First</td>
+                        <td>Last</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </th>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -809,63 +808,63 @@
         <app-docs-example href="components/table#table-head">
           <table cTable>
             <thead cTableColor="light">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
         <app-docs-example href="components/table#table-head">
           <table cTable>
             <thead cTableColor="dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -881,39 +880,39 @@
         <app-docs-example href="components/table#table-foot">
           <table cTable>
             <thead cTableColor="light">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colSpan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
             <tfoot>
-            <tr>
-              <td>Footer</td>
-              <td>Footer</td>
-              <td>Footer</td>
-              <td>Footer</td>
-            </tr>
+              <tr>
+                <td>Footer</td>
+                <td>Footer</td>
+                <td>Footer</td>
+                <td>Footer</td>
+              </tr>
             </tfoot>
           </table>
         </app-docs-example>
@@ -935,32 +934,32 @@
           <table cTable>
             <caption>List of users</caption>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>
@@ -972,32 +971,32 @@
           <table cTable caption="top">
             <caption>List of users</caption>
             <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Class</th>
-              <th scope="col">Heading</th>
-              <th scope="col">Heading</th>
-            </tr>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Class</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-            </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
             </tbody>
           </table>
         </app-docs-example>

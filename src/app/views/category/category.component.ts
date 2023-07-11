@@ -11,6 +11,7 @@ export class CategoryComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  
   ngOnInit() {
     this.getDataFromAPI();
   }
@@ -20,4 +21,5 @@ export class CategoryComponent implements OnInit {
       this.categories = data;
     });
   }
+
 }
