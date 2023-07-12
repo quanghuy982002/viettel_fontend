@@ -29,6 +29,7 @@
                   <td>{{ item.name }}</td>
                   <td>
                     <button cButton color="primary" >Thao tác</button> <!-- Nút thao tác -->
+                    <button cButton color="primary" (click)="deleteCategoryType(item.id)">Xóa</button>
                   </td>
                 </tr>
               </tbody>
