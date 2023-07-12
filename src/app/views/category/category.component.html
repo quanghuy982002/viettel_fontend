@@ -1,179 +1,8 @@
-
-<!-- <div style="display: flex; gap: 20px;">
-  <div style="flex-basis: 30%; border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
-    <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc;">
-      <strong>Loại danh mục</strong>
-      <button cButton color="primary">+ Thêm</button>
-    </div>
-    <div style="display: flex; align-items: center; margin-top: 10px; border-bottom: 1px solid #ccc;">
-      <input aria-label="sm input example" cFormControl placeholder="Tìm kiếm" sizing="sm" type="text">
-      <span style="margin-left: 5px;"><i class="fas fa-search"></i></span>
-    </div>
-    <c-row ngPreserveWhitespaces style="margin-top: 10px;">
-      <c-col xs="12">
-        <c-card class="mb-4" style="border-radius: 10px;">
-          <c-card-header>
-            <strong>Kiểu danh mục</strong>
-          </c-card-header>
-          <c-card-body>
-            <table class="table table-bordered" style="margin-top: 20px;">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let category of categories">
-                  <th scope="row">{{ category.id }}</th>
-                  <td>{{ category.code }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </c-card-body>
-        </c-card>
-      </c-col>
-    </c-row>
-  </div>
-  <div style="flex-basis: 70%; display: flex; flex-direction: column; border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
-    <div style="flex-basis: 60%; border-bottom: 1px solid #ccc;">
-      <div style="text-align: center; margin-bottom: 10px;">
-        <strong>Tìm kiếm danh mục</strong>
-      </div>
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <c-row>
-          <c-col [xs]>
-            <input aria-label="Mã danh mục" cFormControl placeholder="Mã danh mục" />
-          </c-col>
-          <c-col [xs]>
-            <input aria-label="Tên danh mục" cFormControl placeholder="Tên danh mục" />
-          </c-col>
-        </c-row>
-      </div>
-      <div style="display: flex; align-items: center; margin-bottom: 10px;">
-        <div style="width: 150px;">Trạng thái:</div>
-        <c-form-check inline>
-          <input cFormCheckInput checked id="radioinline1" name="radioinline" type="radio" />
-          <label cFormCheckLabel for="radioinline1">Tất cả</label>
-        </c-form-check>
-        <c-form-check inline>
-          <input cFormCheckInput id="radioinline2" name="radioinline" type="radio" />
-          <label cFormCheckLabel for="radioinline2">Hiệu lực</label>
-        </c-form-check>
-        <c-form-check inline>
-          <input cFormCheckInput disabled id="radioinline3" name="radioinline" type="radio" />
-          <label cFormCheckLabel for="radioinline3">Hết hiệu lực (disabled)</label>
-        </c-form-check>
-      </div>
-      <div style="text-align: center;">
-        <button cButton color="primary" variant="outline">Tìm kiếm</button>
-      </div>
-    </div>
-    <div style="flex-basis: 40%; margin-top: 20px;">
-      <c-row ngPreserveWhitespaces>
-        <c-col xs="12">
-          <c-card class="mb-4" style="border-radius: 10px;">
-            <c-card-header>
-              <strong>Bảng danh mục</strong> <small>(Category)</small>
-            </c-card-header>
-            <c-card-body>
-              <p class="text-medium-emphasis small">
-                Mô tả về bảng danh mục
-              </p>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Code</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let category of categories">
-                    <th scope="row">{{ category.id }}</th>
-                    <td>{{ category.code }}</td>
-                    <td>{{ category.name }}</td>
-                    <td>{{ category.description }}</td>
-                    <td>
-                      <div>
-                        <c-badge [color]="category.status ? 'success' : 'danger'">
-                          {{ category.status ? 'Đang hoạt động' : 'Không hoạt động' }}
-                        </c-badge>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </c-card-body>
-          </c-card>
-        </c-col>
-      </c-row>
-    </div>
-  </div>
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <c-row ngPreserveWhitespaces>
-  <c-col xs="12">
-    <c-card class="mb-4">
-      <c-card-header>
-        <strong>Bảng danh mục</strong> <small>(Category)</small>
-      </c-card-header>
-      <c-card-body>
-        <p class="text-medium-emphasis small">
-          Mô tả về bảng danh mục
-        </p>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Code</th>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let category of categories">
-              <th scope="row">{{ category.id }}</th>
-              <td>{{ category.code }}</td>
-              <td>{{ category.name }}</td>
-              <td>{{ category.description }}</td>
-              <td>
-                <div>
-                  <c-badge [color]="category.status ? 'success' : 'danger'">
-                    {{ category.status ? 'Đang hoạt động' : 'Không hoạt động' }}
-                  </c-badge>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </c-card-body>
-    </c-card>
-  </c-col>
-</c-row> -->
-
 <div style="display: flex; gap: 20px;">
   <div style="flex-basis: 30%; border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
     <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc;">
       <strong>Loại danh mục</strong>
-      <button cButton color="primary">+ Thêm</button>
+      <button  mat-raised-button (click)="openDialogAdd()"  cButton color="primary">+ Thêm</button>
     </div>
     <div style="display: flex; align-items: center; margin-top: 10px; border-bottom: 1px solid #ccc;">
       <input aria-label="sm input example" cFormControl placeholder="Tìm kiếm" sizing="sm" type="text">
@@ -195,9 +24,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let category of categories">
-                  <th scope="row">{{ category.id }}</th>
-                  <td>{{ category.code }}</td>
+                <tr *ngFor="let item of category_types">
+                  <th scope="row">{{ item.id }}</th>
+                  <td>{{ item.name }}</td>
                   <td>
                     <button cButton color="primary" >Thao tác</button> <!-- Nút thao tác -->
                   </td>
@@ -279,7 +108,7 @@
                       </div>
                     </td>
                     <td>
-                      <button cButton color="primary">Thao tác</button>
+                      <button mat-raised-button (click)="openDialog()" cButton color="primary" >POPUP EDIT</button>
                     </td>
                   </tr>
                 </tbody>

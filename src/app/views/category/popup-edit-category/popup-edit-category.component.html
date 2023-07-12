@@ -1,0 +1,13 @@
+<h1>Popup Form</h1>
+<!-- Thêm các trường form và các nút lưu và hủy -->
+<form (ngSubmit)="onSave()">
+  <!-- Các trường form -->
+  <mat-form-field>
+    <input matInput placeholder="Tên" name="name">
+  </mat-form-field>
+  <!-- ... -->
+
+  <!-- Các nút lưu và hủy -->
+  <button mat-button type="submit">Lưu</button>
+  <button mat-button (click)="onCancel()">Hủy</button>
+</form>

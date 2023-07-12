@@ -14,17 +14,17 @@ export const navItems: INavData[] = [
     title: true,
     name: 'Theme'
   },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-pencil' }
-  },
+  // {
+  //   name: 'Colors',
+  //   url: '/theme/colors',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // {
+  //   name: 'Typography',
+  //   url: '/theme/typography',
+  //   linkProps: { fragment: 'someAnchor' },
+  //   iconComponent: { name: 'cil-pencil' }
+  // },
   {
     name: 'Components',
     title: true

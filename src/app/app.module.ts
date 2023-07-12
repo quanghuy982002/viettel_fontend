@@ -35,7 +35,7 @@ import {
   TabsModule,
   UtilitiesModule
 } from '@coreui/angular';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { CategoryComponent } from './views/category/category.component';
 import { DocsComponentsModule } from "../components/docs-components.module";
@@ -87,7 +87,8 @@ const APP_CONTAINERS = [
         CardModule,
         NgScrollbarModule,
         DocsComponentsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatFormFieldModule 
     ]
 })
 export class AppModule {
