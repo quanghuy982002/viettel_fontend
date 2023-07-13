@@ -1,1 +1,29 @@
-<p>organization works!</p>
+<!-- <ul>
+    <ng-container *ngFor="let organization of organizationTree">
+      <li>
+        <span (click)="onOrganizationClick(organization)">{{ organization.name }}</span>
+        <ul *ngIf="organization.children && organization.children.length > 0">
+          <app-organization [organizationTree]="organization.children"></app-organization>
+        </ul>
+      </li>
+    </ng-container>
+  </ul> -->
+
+  <ul>
+    <li *ngFor="let organization of organizationTree">
+      <span (click)="onOrganizationClick(organization)">{{ organization.name }}</span>
+      <ul *ngIf="organization.children && organization.children.length > 0">
+        <ng-container *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
+      </ul>
+    </li>
+  </ul>
+  
+  <ng-template #organizationTemplate let-organizations>
+    <li *ngFor="let organization of organizations">
+      <span (click)="onOrganizationClick(organization)">{{ organization.name }}</span>
+      <ul *ngIf="organization.children && organization.children.length > 0">
+        <ng-container *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+  

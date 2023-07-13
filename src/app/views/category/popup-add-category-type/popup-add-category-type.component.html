@@ -1,17 +1,12 @@
 <div class="popup-content">
     <h1>Popup Form</h1>
-    <!-- Thêm các trường form và các nút lưu và hủy -->
     <form (ngSubmit)="onSave()" #categoryForm="ngForm">
-        <!-- Các trường form -->
         <mat-form-field>
           <input matInput placeholder="Mã loại danh mục" [(ngModel)]="category_type.code" name="code" required>
         </mat-form-field>
         <mat-form-field>
           <input matInput placeholder="Tên loại danh mục" [(ngModel)]="category_type.name" name="name" required>
         </mat-form-field>
-        <!-- ... -->
-      
-        <!-- Các nút lưu và hủy -->
         <button mat-button type="submit" [disabled]="categoryForm.invalid">Lưu</button>
         <button mat-button (click)="onCancel()">Hủy</button>
       </form>

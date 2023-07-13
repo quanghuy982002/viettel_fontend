@@ -41,6 +41,7 @@ import { CategoryComponent } from './views/category/category.component';
 import { DocsComponentsModule } from "../components/docs-components.module";
 import { HttpClientModule } from '@angular/common/http';
 import { OrganizationComponent } from './views/organization/organization.component';
+
 const APP_CONTAINERS = [
   DefaultFooterComponent,
   DefaultHeaderComponent,
