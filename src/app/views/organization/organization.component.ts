@@ -17,7 +17,9 @@ export interface Organization {
 export class OrganizationComponent implements OnInit {
   @Input() organizationTree: Organization[] = [];
 
-  private baseUrl = 'http://localhost:8080/api/organization';
+  RecruitmentOrganizations: any[] = [];
+
+   private baseUrl = 'http://localhost:8080/api/organization';
 
   constructor(private http: HttpClient) { }
 
@@ -29,6 +31,13 @@ export class OrganizationComponent implements OnInit {
     this.getUnitTree().subscribe(tree => {
       this.organizationTree = tree;
     });
+    this.getDateRecruitmentOrganization()
+  }
+
+  getDateRecruitmentOrganization(){
+    this.http.get<any[]>('http://localhost:8080/api/v3/recruitment_organization').subscribe(data => {
+      this.RecruitmentOrganizations = data;
+    });
   }
 
   onOrganizationClick(organization: Organization): void {
@@ -36,4 +45,11 @@ export class OrganizationComponent implements OnInit {
     // Gọi API hoặc thực hiện các hành động khác tùy ý
   }
 
+  openAddOrganization() {
+
+  }
+
+  edit(id: number) {
+
+  }
 }
