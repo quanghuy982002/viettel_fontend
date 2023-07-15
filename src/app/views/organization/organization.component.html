@@ -66,34 +66,51 @@
           <strong>Danh sách đơn vị</strong>
           <button mat-raised-button (click)="openAddOrganization()" cButton color="primary">+ Thêm</button>
         </div>
-        <table class="table table-bordered" style="margin-top: 20px;">
-          <thead>
-            <tr>
-              <th scope="col">STT</th>
-              <th scope="col">Sửa</th>
-              <th scope="col">Tên đơn vị</th> 
-              <th scope="col">Ngày hiệu lực</th> 
-              <th scope="col">Ngày hết hiệu lực</th> 
-              <th scope="col">Quy mô nhân sự</th> 
-              <th scope="col">Địa chỉ</th> 
-              <th scope="col">Là đơn vị tuyển dụng</th> 
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of RecruitmentOrganizations">
-              <th scope="row">{{ item.id }}</th>
-              <td>
-                <button cButton color="primary" (click)="edit(item.id)">Sửa</button>
-              </td>
-              <td>{{ item.name }}</td>
-              <td>{{item.effective_start_date}}</td>
-              <td>{{item.effective_end_date}}</td>
-              <td>{{item.scope}}</td>
-              <td>{{item.officeAddress}}</td>
-              <td>{{item.active}}</td>
-            </tr>
-          </tbody>
-        </table>
+        <c-row ngPreserveWhitespaces>
+          <c-col xs="12">
+            <c-card class="mb-4" style="border-radius: 10px;">
+              <c-card-header>
+                <strong>Bảng</strong> <small>(Category)</small>
+              </c-card-header>
+              <c-card-body>
+                <table class="table table-bordered" style="margin-top: 20px;">
+                  <thead>
+                    <tr>
+                      <th scope="col">STT</th>
+                      <th scope="col">Sửa</th>
+                      <th scope="col">Tên đơn vị</th>
+                      <th scope="col">Ngày hiệu lực</th>
+                      <th scope="col">Ngày hết hiệu lực</th>
+                      <th scope="col">Quy mô nhân sự</th>
+                      <th scope="col">Địa chỉ</th>
+                      <th scope="col">Là đơn vị tuyển dụng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of RecruitmentOrganizations">
+                      <th scope="row">{{ item.organizationId }}</th>
+                      <td>
+                        <button cButton color="primary" (click)="edit(item.id)">Sửa</button>
+                      </td>
+                      <td>{{ item.organizationName }}</td>
+                      <td>{{item.effectiveStartDate}}</td>
+                      <td>{{item.effectiveEndDate}}</td>
+                      <td>{{item.scope}}</td>
+                      <td>{{item.officeAddress}}</td>
+                      <td>
+                        <div>
+                          <c-badge [color]="item.active ? 'success' : 'danger'">
+                            {{ item.status ? '' : '' }}
+                          </c-badge>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </c-card-body>
+            </c-card>
+          </c-col>
+        </c-row>
       </c-row>
     </c-col>
   </c-row>

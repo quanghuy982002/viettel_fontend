@@ -35,7 +35,7 @@ export class OrganizationComponent implements OnInit {
   }
 
   getDateRecruitmentOrganization(){
-    this.http.get<any[]>('http://localhost:8080/api/v3/recruitment_organization').subscribe(data => {
+    this.http.get<any[]>('http://localhost:8080/api/v3/join').subscribe(data => {
       this.RecruitmentOrganizations = data;
     });
   }
