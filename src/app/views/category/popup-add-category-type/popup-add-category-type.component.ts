@@ -21,6 +21,7 @@ export class PopupAddCategoryTypeComponent {
         (response) => {
           console.log('Thêm thành công', response);
           this.dialogRef.close();
+          window.location.reload();
         },
         (error) => {
           console.error('Lỗi khi thêm', error);

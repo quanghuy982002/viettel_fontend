@@ -1,0 +1,92 @@
+<!-- <form #customStylesForm="ngForm" class="popup-form" (ngSubmit)="onSubmit1()" novalidate>
+    <div class="col-md-3">
+        <label for="validationCustom04">Loại danh mục</label>
+        <select class="form-select" id="validationCustom04" required [(ngModel)]="categoryTypeSelected" name="categoryTypeSelected">
+          <option value="">15</option>
+          <option value="">16</option>
+          <option value="">17</option>
+          <option *ngFor="let categoryType of data.categoryTypes" [ngValue]="categoryType">{{ categoryType.name }}</option>
+        </select>
+      </div>
+      
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="validationCustom01">Mã danh mục</label>
+            <input class="form-control" id="validationCustom01" required type="text" [(ngModel)]="categoryCode" />
+        </div>
+        <div class="col-md-4">
+            <label for="validationCustom02">Tên danh mục</label>
+            <input class="form-control" id="validationCustom02" required type="text" [(ngModel)]="categoryName" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="datepickerStart">Ngày hiệu lực</label>
+            <input class="form-control" id="datepickerStart" required type="date" [(ngModel)]="startDate" />
+        </div>
+        <div class="col-md-4">
+            <label for="datepickerEnd">Ngày hết hiệu lực</label>
+            <input class="form-control" id="datepickerEnd" required type="date" [(ngModel)]="endDate" />
+        </div>
+    </div>
+    <form cForm>
+        <div class="mb-3">
+            <label cLabel for="exampleFormControlTextarea1">Mô tả</label>
+            <textarea cFormControl id="exampleFormControlTextarea1" rows="3" [(ngModel)]="description"></textarea>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary me-1" type="submit" (click)="onSubmit1()">Submit form</button>
+            <button class="btn btn-secondary" type="reset" (click)="onReset1()">Reset</button>
+        </div>
+    </div>
+</form> -->
+
+<div class="modal-header">
+    <h5 class="modal-title">Thêm mới danh mục</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="categoryType">Loại danh mục</label>
+            <select class="form-control" id="categoryType" [(ngModel)]="category.typeId" name="typeId"> <!-- Update binding to typeId -->
+              <option *ngFor="let categoryType of categoryTypes" [ngValue]="categoryType.id">
+                {{ categoryType.name }}
+              </option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="categoryCode">Mã danh mục</label>
+            <input type="text" class="form-control" id="categoryCode" [(ngModel)]="category.code" name="code">
+        </div>
+        <div class="form-group">
+            <label for="categoryName">Tên danh mục</label>
+            <input type="text" class="form-control" id="categoryName" [(ngModel)]="category.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="categoryEffectiveDate">Ngày hiệu lực</label>
+            <input type="date" class="form-control" id="categoryEffectiveDate" [(ngModel)]="category.effective_date"
+                name="effective_date">
+        </div>
+        <div class="form-group">
+            <label for="categoryExpiredDate">Ngày hết hạn</label>
+            <input type="date" class="form-control" id="categoryExpiredDate" [(ngModel)]="category.expired_date"
+                name="expired_date">
+        </div>
+        <div class="form-group">
+            <label for="categoryDescription">Mô tả</label>
+            <input type="text" class="form-control" id="categoryDescription" [(ngModel)]="category.description"
+                name="description">
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+    <button type="button" class="btn btn-primary" (click)="onSubmit()">Thêm</button>
+</div>

@@ -1,0 +1,18 @@
+<div class="popup-content">
+    <form (ngSubmit)="onSave()" #categoryForm="ngForm">
+      <c-row>
+        <c-col>
+          <mat-form-field>
+            <input matInput placeholder="Mã loại danh mục"  name="code" required>
+          </mat-form-field>
+        </c-col>
+        <c-col>
+          <!-- <mat-form-field>
+            <input matInput placeholder="Tên loại danh mục" [(ngModel)]="category_type.name" name="name" required>
+          </mat-form-field> -->
+        </c-col>
+        <button mat-button type="submit" [disabled]="categoryForm.invalid">Lưu</button>
+        <button mat-button (click)="onCancel()">Hủy</button>
+      </c-row>
+    </form>
+  </div>
