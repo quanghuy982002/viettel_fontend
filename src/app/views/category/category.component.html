@@ -28,7 +28,6 @@
                   <th scope="row">{{ item.id }}</th>
                   <td>{{ item.name }}</td>
                   <td>
-                    <!-- <button cButton color="primary" >Thao tác</button> Nút thao tác -->
                     <button cButton color="primary" (click)="deleteCategoryType(item.id)">Xóa</button>
                   </td>
                 </tr>
@@ -93,30 +92,26 @@
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Code</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">STT</th>
+                    <th scope="col">Thao tác</th>
+                    <th scope="col">Mã Danh mục</th>
+                    <th scope="col">Tên danh mục</th>
+                    <th scope="col">Ngày hiệu lực</th>
+                    <th scope="col">Ngày hết hiệu lực</th>
+
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let category of categories">
                     <th scope="row">{{ category.id }}</th>
+                    <td>
+                      <button mat-raised-button (click)="openDialog()" cButton color="primary">EDIT</button>
+                      <button cButton color="primary" (click)="deleteCategory(category.id)">Xóa</button>
+                    </td>
                     <td>{{ category.code }}</td>
                     <td>{{ category.name }}</td>
-                    <td>{{ category.description }}</td>
-                    <td>
-                      <div>
-                        <c-badge [color]="category.status ? 'success' : 'danger'">
-                          {{ category.status ? 'Đang hoạt động' : 'Không hoạt động' }}
-                        </c-badge>
-                      </div>
-                    </td>
-                    <td>
-                      <button mat-raised-button (click)="openDialog()" cButton color="primary">POPUP EDIT</button>
-                    </td>
+                    <td>{{ category.effective_date}}</td>
+                    <td>{{ category.expired_date}}</td>
                   </tr>
                 </tbody>
               </table>

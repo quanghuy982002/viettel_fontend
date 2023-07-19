@@ -31,7 +31,7 @@ export class CategoryComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(PopupEditCategoryComponent, {
-      // width: '400px',
+      width: '700px',
       data: {}
     });
 
@@ -45,7 +45,7 @@ export class CategoryComponent implements OnInit {
 
   openDialogAdd() {
     const dialogRef = this.dialog.open(PopupAddCategoryTypeComponent, {
-      width: '400px',
+      width: '700px',
       data: {}
     });
 
@@ -57,7 +57,6 @@ export class CategoryComponent implements OnInit {
     });
   }
 
-  // Lấy dữ liệu từ API category type
   getDataCategoryType() {
     this.http.get<any[]>('http://localhost:8080/api/v2/category_type').subscribe(data => {
       this.category_types = data;
@@ -76,16 +75,30 @@ export class CategoryComponent implements OnInit {
       (error) => {
         window.location.reload();
         console.error('Lỗi khi xóa', error);
-        // alert("Thất bại", error);
+      }
+    );
+  }
+
+  deleteCategory(id: number) {
+    this.http.delete(`http://localhost:8080/api/v1/category/${id}`).subscribe(
+      () => {
+        window.location.reload();
+        console.log('Xóa thành công');
+        alert("Xóa thành công")
+        this.getDataCategoryType(); 
+        
+      },
+      (error) => {
+        window.location.reload();
+        console.error('Lỗi khi xóa', error);
       }
     );
   }
 
   openPopupAddCategory() {
     const dialogRef = this.dialog.open(PopupAddCategoryComponent, {
-      data: { categoryTypes: this.category_types } // Truyền dữ liệu category_types vào đây
+      data: { categoryTypes: this.category_types } 
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('Kết quả:', result);
       if (result === 'success') {

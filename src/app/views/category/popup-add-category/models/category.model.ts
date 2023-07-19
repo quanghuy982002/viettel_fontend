@@ -1,5 +1,3 @@
-import { CategoryType } from "./category-type.model";
-
 export class Category {
     id!: number;
     code!: string;
@@ -8,5 +6,5 @@ export class Category {
     effective_date!: string; 
     expired_date!: string;
     typeId!: number;
-  }
+}
   

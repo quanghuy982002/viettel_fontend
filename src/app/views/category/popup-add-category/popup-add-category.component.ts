@@ -8,10 +8,10 @@ import { MatDialogRef} from '@angular/material/dialog';
   templateUrl: './popup-add-category.component.html',
   styleUrls: ['./popup-add-category.component.scss']
 })
+
 export class PopupAddCategoryComponent implements OnInit {
   category: Category = new Category();
   categoryTypes: CategoryType[] = [];
-
   constructor(public dialogRef: MatDialogRef<PopupAddCategoryComponent>,
     private categoryService: CategoryService) { }
 
