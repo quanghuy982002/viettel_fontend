@@ -1,0 +1,112 @@
+<div class="modal-header">
+    <h5 class="modal-title">Thêm mới</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <c-form-check>
+          <label cFormCheckLabel for="inline1">Là đơn vị tuyển dụng</label>
+          <input cFormCheckInput id="inline1" type="checkbox" [(ngModel)]="organization.is_active" name="is_active">
+        </c-form-check>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="organizationCode">Mã đơn vị</label>
+              <select class="form-control" id="organizationCode" [(ngModel)]="organization.code" name="code">
+                <option value="">-- Chọn mã đơn vị --</option>
+                <option *ngFor="let org of organizations" [value]="org.code">{{ org.code }}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="organizationName">Tên đơn vị</label>
+              <input type="text" class="form-control" id="organizationName" [value]="getOrganizationName(organization.code)" name="name" disabled>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="organizationEffectiveDate">Ngày hiệu lực</label>
+              <input type="date" class="form-control" id="organizationEffectiveDate"
+                [(ngModel)]="organization.effective_start_date" name="effective_start_date">
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="organizationExpiredDate">Ngày hết hiệu lực</label>
+              <input type="date" class="form-control" id="organizationExpiredDate"
+                [(ngModel)]="organization.effective_end_date" name="effective_end_date">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="organizationScope">Quy mô nhân sự</label>
+              <input type="text" class="form-control" id="organizationScope" [(ngModel)]="organization.scope" name="scope">
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="organizationAddress">Địa chỉ văn phòng</label>
+              <input type="text" class="form-control" id="organizationAddress" [(ngModel)]="organization.office_address"
+                name="office_address">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="recruitmentCluesFullname">Tên đầu mối tuyển dụng</label>
+              <input type="text" class="form-control" id="recruitmentCluesFullname"
+                [(ngModel)]="organization.recruitment_clues_fullname" name="recruitment_clues_fullname">
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="recruitmentCluesEmail">Email đầu mối tuyển dụng</label>
+              <input type="email" class="form-control" id="recruitmentCluesEmail"
+                [(ngModel)]="organization.recruitment_clues_email" name="recruitment_clues_email">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="form-group">
+              <label for="recruitmentCluesPhone">Điện thoại đầu mối tuyển dụng</label>
+              <input type="tel" class="form-control" id="recruitmentCluesPhone"
+                [(ngModel)]="organization.recruitment_clues_phone" name="recruitment_clues_phone">
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="organizationInformation">Thông tin đơn vị tuyển dụng</label>
+          <textarea class="form-control" id="organizationInformation" [(ngModel)]="organization.information"
+            name="information" rows="5"></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="image_file">File ảnh đơn vị</label>
+          <input type="file" class="form-control-file" id="image_file" (change)="onFileChange($event)" accept=".jpg, .jpeg, .png" name="image_file">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+    <button type="button" class="btn btn-primary" (click)="onSave()">Thêm</button>
+  </div>
+  

@@ -5,18 +5,16 @@
       <ul>
         <li *ngFor="let organization of organizationTree">
           <span (click)="onOrganizationClick(organization)">{{ organization.name }}</span>
-          <ul *ngIf="organization.children && organization.children.length > 0">
-            <ng-container
-              *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
+          <ul *ngIf="organizationsToShow.includes(organization)">
+            <ng-container *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
           </ul>
         </li>
       </ul>
       <ng-template #organizationTemplate let-organizations>
         <li *ngFor="let organization of organizations">
           <span (click)="onOrganizationClick(organization)">{{ organization.name }}</span>
-          <ul *ngIf="organization.children && organization.children.length > 0">
-            <ng-container
-              *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
+          <ul *ngIf="organizationsToShow.includes(organization)">
+            <ng-container *ngTemplateOutlet="organizationTemplate; context: { $implicit: organization.children }"></ng-container>
           </ul>
         </li>
       </ng-template>
@@ -46,7 +44,7 @@
       <c-row [sm]="10" cBorder="10" padding="10" style="margin-top: 20px;">
         <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #ccc;">
           <strong>Danh sách đơn vị</strong>
-          <button mat-raised-button (click)="openAddOrganization()" cButton color="primary">+ Thêm</button>
+          <button mat-raised-button (click)="openAddRO()" cButton color="primary">+ Thêm</button>
         </div>
         <c-row ngPreserveWhitespaces>
           <c-col xs="12">
@@ -75,14 +73,14 @@
                         <button cButton color="primary" (click)="edit(item.id)">Sửa</button>
                       </td>
                       <td>{{ item.organizationName }}</td>
-                      <td>{{item.effectiveStartDate}}</td>
-                      <td>{{item.effectiveEndDate}}</td>
+                      <td>{{item.effective_start_date}}</td>
+                      <td>{{item.effective_end_date}}</td>
                       <td>{{item.scope}}</td>
                       <td>{{item.officeAddress}}</td>
                       <td>
                         <div>
                           <c-badge [color]="item.active ? 'success' : 'danger'">
-                            {{ item.status ? '' : '' }}
+                            {{ item.is_active ? '' : '' }}
                           </c-badge>
                         </div>
                       </td>

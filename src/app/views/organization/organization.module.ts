@@ -7,10 +7,12 @@ import { PopupEditOrganizationComponent } from './popup-edit-organization/popup-
 import { MatDialogModule } from '@angular/material/dialog'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { AddRecruimentOrganizationComponent } from './add-recruiment-organization/add-recruiment-organization.component';
 
 @NgModule({
   declarations: [
-    PopupEditOrganizationComponent
+    PopupEditOrganizationComponent,
+    AddRecruimentOrganizationComponent
   ],
   imports: [
     MatDialogModule,

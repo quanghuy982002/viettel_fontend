@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
-import { PopupEditOrganizationComponent } from './popup-edit-organization/popup-edit-organization.component';
+import { AddRecruimentOrganizationComponent } from './add-recruiment-organization/add-recruiment-organization.component';
 
 export interface Organization {
   id: number;
@@ -18,10 +18,11 @@ export interface Organization {
 })
 export class OrganizationComponent implements OnInit {
   @Input() organizationTree: Organization[] = [];
-
   RecruitmentOrganizations: any[] = [];
 
-   private baseUrl = 'http://localhost:8080/api/organization';
+  private baseUrl = 'http://localhost:8080/api/organization';
+
+  organizationsToShow: Organization[] = [];
 
   constructor(private http: HttpClient, private dialog: MatDialog) { }
 
@@ -32,37 +33,49 @@ export class OrganizationComponent implements OnInit {
   ngOnInit(): void {
     this.getUnitTree().subscribe(tree => {
       this.organizationTree = tree;
+      this.organizationsToShow.push(...this.organizationTree); // Hiển thị công ty mẹ ban đầu
     });
-    this.getDataRecruitmentOrganization()
+    this.getDataRecruitmentOrganization();
   }
 
-  getDataRecruitmentOrganization(){
-    this.http.get<any[]>('http://localhost:8080/api/v3/join').subscribe(data => {
+  // ngOnInit(): void {
+  //   this.getUnitTree().subscribe(tree => {
+  //     this.organizationTree = tree;
+  //     this.organizationsToShow = this.organizationTree.slice(0, 1); // Chỉ hiển thị công ty mẹ ban đầu
+  //   });
+  //   this.getDataRecruitmentOrganization();
+  // }
+
+  getDataRecruitmentOrganization() {
+    this.http.get<any[]>('http://localhost:8080/api/v3/recruitment_organization').subscribe(data => {
       this.RecruitmentOrganizations = data;
     });
   }
 
   onOrganizationClick(organization: Organization): void {
-    // Xử lý khi người dùng click vào công ty mẹ (organization)
-    // Gọi API hoặc thực hiện các hành động khác tùy ý
+    if (organization.children && organization.children.length > 0) {
+      if (this.organizationsToShow.includes(organization)) {
+        this.organizationsToShow = this.organizationsToShow.filter(org => org !== organization);
+      } else {
+        this.organizationsToShow.push(organization);
+      }
+    }
   }
 
-  openAddOrganization() {
-    const dialogRef = this.dialog.open(PopupEditOrganizationComponent, {
-      width: '400px',
+  openAddRO() {
+    const dialogRef = this.dialog.open(AddRecruimentOrganizationComponent, {
+      width: '600px',
       data: {}
-    })
+    });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('Kết quả:', result);
       if (result === 'success') {
-        this.getDataRecruitmentOrganization(); 
+        this.getDataRecruitmentOrganization();
       }
     });
   }
 
-
   edit(id: number) {
-
   }
 }

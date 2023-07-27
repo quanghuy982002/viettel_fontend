@@ -49,7 +49,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-    declarations: [AppComponent, ...APP_CONTAINERS, CategoryComponent, OrganizationComponent],
+    declarations: [AppComponent, ...APP_CONTAINERS, CategoryComponent, OrganizationComponent,],
     providers: [
         {
             provide: LocationStrategy,
