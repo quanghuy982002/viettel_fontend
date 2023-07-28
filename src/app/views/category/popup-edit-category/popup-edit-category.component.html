@@ -1,13 +1,33 @@
-<h1>Popup Form</h1>
-<!-- Thêm các trường form và các nút lưu và hủy -->
-<form (ngSubmit)="onSave()">
-  <!-- Các trường form -->
-  <mat-form-field>
-    <input matInput placeholder="Tên" name="name">
-  </mat-form-field>
-  <!-- ... -->
-
-  <!-- Các nút lưu và hủy -->
-  <button mat-button type="submit">Lưu</button>
-  <button mat-button (click)="onCancel()">Hủy</button>
-</form>
+<div class="edit-category-popup">
+  <h2>Popup Chỉnh sửa Danh mục</h2>
+  <div class="form-group">
+    <label for="categoryType">Loại danh mục:</label>
+    <select id="categoryType" [(ngModel)]="category.typeId" cFormControl>
+      <option *ngFor="let categoryType of categoryTypes" [value]="categoryType.id">{{ categoryType.name }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="name">Tên loại danh mục:</label>
+    <input type="text" id="name" [(ngModel)]="category.name" cFormControl placeholder="Hiển thị Tên loại danh mục">
+  </div>
+  <div class="form-group">
+    <label for="code">Mã loại danh mục:</label>
+    <input type="text" id="code" [(ngModel)]="category.code" cFormControl placeholder="Hiển thị Mã loại danh mục">
+  </div>
+  <div class="form-group">
+    <label for="effectiveDate">Ngày hiệu lực:</label>
+    <input type="date" id="effectiveDate" [(ngModel)]="category.effective_date" cFormControl>
+  </div>
+  <div class="form-group">
+    <label for="expiredDate">Ngày hết hiệu lực:</label>
+    <input type="date" id="expiredDate" [(ngModel)]="category.expired_date" cFormControl>
+  </div>
+  <div class="form-group">
+    <label for="description">Mô tả danh mục:</label>
+    <textarea id="description" [(ngModel)]="category.description" cFormControl rows="3"></textarea>
+  </div>
+  <div class="buttons">
+    <button class="btn-cancel" (click)="closeDialog()">Hủy</button>
+    <button class="btn-save" (click)="saveChanges()">Lưu</button>
+  </div>
+</div>

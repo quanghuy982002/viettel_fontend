@@ -9,12 +9,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopupAddCategoryTypeComponent } from './popup-add-category-type/popup-add-category-type.component';
 import { FormsModule } from '@angular/forms';
 import { PopupAddCategoryComponent } from './popup-add-category/popup-add-category.component';
+import { EditCategoryTypeComponent } from './edit-category-type/edit-category-type.component';
 @NgModule({
   declarations: [
   
     PopupEditCategoryComponent,
        PopupAddCategoryTypeComponent,
-       PopupAddCategoryComponent
+       PopupAddCategoryComponent,
+       EditCategoryTypeComponent
   ],
   imports: [
     FormsModule,

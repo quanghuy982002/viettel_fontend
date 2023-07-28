@@ -20,7 +20,7 @@
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Name</th>
-                  <th scope="col">Actions</th> <!-- Thêm cột Actions -->
+                  <th scope="col">Actions</th> 
                 </tr>
               </thead>
               <tbody>
@@ -28,6 +28,7 @@
                   <th scope="row">{{ item.id }}</th>
                   <td>{{ item.name }}</td>
                   <td>
+                    <button cButton color="primary" (click)="editCategoryType(item.id)">Sửa</button>
                     <button cButton color="primary" (click)="deleteCategoryType(item.id)">Xóa</button>
                   </td>
                 </tr>
@@ -105,7 +106,7 @@
                   <tr *ngFor="let category of categories">
                     <th scope="row">{{ category.id }}</th>
                     <td>
-                      <button mat-raised-button (click)="openDialog()" cButton color="primary">EDIT</button>
+                      <button mat-raised-button (click)="editCategory(category.id)" cButton color="primary">EDIT Danh muc</button>
                       <button cButton color="primary" (click)="deleteCategory(category.id)">Xóa</button>
                     </td>
                     <td>{{ category.code }}</td>

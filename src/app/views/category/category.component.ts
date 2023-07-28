@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PopupEditCategoryComponent } from './popup-edit-category/popup-edit-category.component';
 import { PopupAddCategoryTypeComponent } from './popup-add-category-type/popup-add-category-type.component';
 import { PopupAddCategoryComponent } from './popup-add-category/popup-add-category.component';
+import { EditCategoryTypeComponent } from './edit-category-type/edit-category-type.component';
 
 @Component({
   selector: 'app-category',
@@ -38,7 +39,7 @@ export class CategoryComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('Kết quả:', result);
       if (result === 'success') {
-        this.getDataFromAPI(); 
+        this.getDataFromAPI();
       }
     });
   }
@@ -52,7 +53,7 @@ export class CategoryComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('Kết quả:', result);
       if (result === 'success') {
-        this.getDataCategoryType(); 
+        this.getDataCategoryType();
       }
     });
   }
@@ -69,8 +70,8 @@ export class CategoryComponent implements OnInit {
         window.location.reload();
         console.log('Xóa thành công');
         alert("Xóa thành công")
-        this.getDataCategoryType(); 
-        
+        this.getDataCategoryType();
+
       },
       (error) => {
         window.location.reload();
@@ -85,8 +86,8 @@ export class CategoryComponent implements OnInit {
         window.location.reload();
         console.log('Xóa thành công');
         alert("Xóa thành công")
-        this.getDataCategoryType(); 
-        
+        this.getDataCategoryType();
+
       },
       (error) => {
         window.location.reload();
@@ -97,10 +98,40 @@ export class CategoryComponent implements OnInit {
 
   openPopupAddCategory() {
     const dialogRef = this.dialog.open(PopupAddCategoryComponent, {
-      data: { categoryTypes: this.category_types } 
+      data: { categoryTypes: this.category_types }
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('Kết quả:', result);
+      if (result === 'success') {
+        this.getDataFromAPI();
+      }
+    });
+  }
+
+  editCategoryType(categoryTypeId: number): void {
+    const categoryTypeToEdit = this.category_types.find(item => item.id === categoryTypeId);
+
+    const dialogRef = this.dialog.open(EditCategoryTypeComponent, {
+      width: '300px',
+      data: { ...categoryTypeToEdit }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'success') {
+        this.getDataCategoryType(); 
+      }
+    });
+  }
+
+  editCategory(categoryId: number): void {
+    const categoryToEdit = this.categories.find(item => item.id === categoryId);
+
+    const dialogRef = this.dialog.open(PopupEditCategoryComponent, {
+      width: '400px',
+      data: { ...categoryToEdit, categoryTypes: this.category_types }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
       if (result === 'success') {
         this.getDataFromAPI(); 
       }

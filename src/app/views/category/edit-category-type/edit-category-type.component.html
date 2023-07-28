@@ -1,0 +1,16 @@
+<div class="edit-category-type-popup">
+    <h2>Edit Category Type</h2>
+    <div class="form-group">
+      <label for="code">Mã Loại danh mục:</label>
+      <input type="text" id="code" [(ngModel)]="categoryType.code" placeholder="Mã loại danh mục">
+    </div>
+    <div class="form-group">
+      <label for="name">Tên Loại danh mục:</label>
+      <input type="text" id="name" [(ngModel)]="categoryType.name" placeholder="Tên loại danh mục">
+    </div>
+    <div class="buttons">
+      <button class="btn-save" (click)="saveChanges()">Lưu lại</button>
+      <button class="btn-cancel" (click)="closeDialog()">Hủy bỏ</button>
+    </div>
+  </div>
+  

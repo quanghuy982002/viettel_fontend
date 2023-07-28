@@ -1,12 +1,12 @@
-.edit-category-popup {
-    max-width: 500px;
+.edit-category-type-popup {
+    max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f5f5f5;
     border-radius: 5px;
   }
   
-  .edit-category-popup h2 {
+  .edit-category-type-popup h2 {
     font-size: 18px;
     margin-bottom: 15px;
   }
@@ -21,18 +21,12 @@
     margin-bottom: 5px;
   }
   
-  .form-group input[type="text"],
-  .form-group textarea,
-  .form-group select {
+  .form-group input {
     width: 100%;
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
-  
-  .form-group textarea {
-    resize: vertical;
   }
   
   .buttons {
@@ -59,8 +53,7 @@
     color: #000;
   }
   
-  .btn-save:hover,
-  .btn-cancel:hover {
+  .btn-save:hover, .btn-cancel:hover {
     opacity: 0.8;
   }
   

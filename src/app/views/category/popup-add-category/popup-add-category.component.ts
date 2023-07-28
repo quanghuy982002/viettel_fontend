@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from './category.service';
-import { Category } from './models/category.model';
-import { CategoryType } from './models/category-type.model';
-import { MatDialogRef} from '@angular/material/dialog';
+import { Category } from '../models/category.model';
+import { CategoryType } from '../models/category-type.model';
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-popup-add-category',
   templateUrl: './popup-add-category.component.html',
