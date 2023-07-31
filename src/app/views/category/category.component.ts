@@ -27,6 +27,7 @@ export class CategoryComponent implements OnInit {
   getDataFromAPI() {
     this.http.get<any[]>('http://localhost:8080/api/v1/category').subscribe(data => {
       this.categories = data;
+      this.searchCategories();
     });
   }
 
@@ -136,5 +137,32 @@ export class CategoryComponent implements OnInit {
         this.getDataFromAPI(); 
       }
     });
+  }
+
+  // Tìm kiếm
+  searchCategoryName: string = '';
+  searchCategoryCode: string = '';
+  searchValidity: string = 'all'; 
+  filteredCategories: any[] = [];
+  // ...
+
+  searchCategories() {
+    // Lọc danh mục dựa trên tên và mã danh mục
+    const filteredCategories = this.categories.filter((category) => {
+      const nameMatch = category.name.toLowerCase().includes(this.searchCategoryName.toLowerCase());
+      const codeMatch = category.code.toLowerCase().includes(this.searchCategoryCode.toLowerCase());
+
+      return nameMatch || codeMatch;
+    });
+
+    // Lọc danh mục dựa trên trạng thái hiệu lực
+    const now = new Date();
+    if (this.searchValidity === 'valid') {
+      this.filteredCategories = filteredCategories.filter((category) => new Date(category.expired_date) >= now);
+    } else if (this.searchValidity === 'expired') {
+      this.filteredCategories = filteredCategories.filter((category) => new Date(category.expired_date) < now);
+    } else {
+      this.filteredCategories = filteredCategories;
+    }
   }
 }

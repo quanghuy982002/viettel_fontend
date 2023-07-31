@@ -3,8 +3,8 @@ export class Category {
     code!: string;
     name!: string;
     description!: string;
-    effective_date!: string; 
-    expired_date!: string;
+    effective_date!: Date; 
+    expired_date!: Date;
     typeId!: number;
 }
   

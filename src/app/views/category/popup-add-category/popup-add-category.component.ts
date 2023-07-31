@@ -31,10 +31,11 @@ export class PopupAddCategoryComponent implements OnInit {
       (data) => {
         console.log('New category added:', data);
         this.dialogRef.close();
-        window.location.reload();
+        this.categoryService.getAllCategory();
       },
       (error) => {
         console.error('Error adding category:', error);
+        this.categoryService.getAllCategory();
       }
     );
   }

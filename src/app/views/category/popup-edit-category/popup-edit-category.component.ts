@@ -11,25 +11,32 @@ import { Category } from '../models/category.model';
 })
 export class PopupEditCategoryComponent implements OnInit {
   category: Category = new Category();
-  categoryTypes: any[] = []; 
+  categoryTypes: CategoryType[] = [];
 
   constructor(
     private http: HttpClient,
     public dialogRef: MatDialogRef<PopupEditCategoryComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-  ) {
-    this.category = { ...data }; 
-  }
+  ) {}
+  
   ngOnInit(): void {
     this.http.get<CategoryType[]>(`http://localhost:8080/api/v2/category_type`).subscribe(
       (data) => {
         this.categoryTypes = data;
+        this.category = { ...this.data };
+        const selectedCategoryType = this.categoryTypes.find(ct => ct.id === this.category.typeId);
+        if (!selectedCategoryType) {
+          const defaultCategoryType = this.categoryTypes[0];
+          this.category.typeId = defaultCategoryType ? defaultCategoryType.id : 0;
+        }
       },
       (error) => {
-        console.error('Error fetching category types:', error);
+        console.error('Lỗi khi tải loại danh mục:', error);
       }
     );
   }
+  
+  
 
   saveChanges(): void {
     const apiUrl = `http://localhost:8080/api/v1/category/${this.category.id}`;
@@ -47,4 +54,10 @@ export class PopupEditCategoryComponent implements OnInit {
   closeDialog(): void {
     this.dialogRef.close(); 
   }
+
+  compareCategoryType(ct1: CategoryType, ct2: CategoryType): boolean {
+    return ct1 && ct2 ? ct1.id === ct2.id : ct1 === ct2;
+  }
+
+  
 }

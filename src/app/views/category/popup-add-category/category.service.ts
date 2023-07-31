@@ -14,8 +14,10 @@ export class CategoryService {
   getCategoryTypes(): Observable<CategoryType[]> {
     return this.http.get<CategoryType[]>(`http://localhost:8080/api/v2/category_type`);
   }
-
   addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(`http://localhost:8080/api/v1/category`, category);
+  }
+  getAllCategory(): Observable<Category[]> {
+    return this.http.get<Category[]>('http://localhost:8080/api/v1/category');
   }
 }

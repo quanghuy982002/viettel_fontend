@@ -24,8 +24,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let item of category_types">
-                  <th scope="row">{{ item.id }}</th>
+                <tr *ngFor="let item of category_types; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
                   <td>{{ item.name }}</td>
                   <td>
                     <button cButton color="primary" (click)="editCategoryType(item.id)">Sửa</button>
@@ -48,30 +48,30 @@
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <c-row>
           <c-col [xs]>
-            <input aria-label="Mã danh mục" cFormControl placeholder="Mã danh mục" />
+            <input aria-label="Mã danh mục" cFormControl placeholder="Mã danh mục" [(ngModel)]="searchCategoryCode" />
           </c-col>
           <c-col [xs]>
-            <input aria-label="Tên danh mục" cFormControl placeholder="Tên danh mục" />
+            <input aria-label="Tên danh mục" cFormControl placeholder="Tên danh mục" [(ngModel)]="searchCategoryName" />
           </c-col>
         </c-row>
       </div>
       <div style="display: flex; align-items: center; margin-bottom: 10px;">
         <div style="width: 150px;">Trạng thái:</div>
         <c-form-check inline>
-          <input cFormCheckInput checked id="radioinline1" name="radioinline" type="radio" />
+          <input cFormCheckInput [(ngModel)]="searchValidity" name="radioinline" type="radio" value="all" />
           <label cFormCheckLabel for="radioinline1">Tất cả</label>
         </c-form-check>
         <c-form-check inline>
-          <input cFormCheckInput id="radioinline2" name="radioinline" type="radio" />
+          <input cFormCheckInput [(ngModel)]="searchValidity" name="radioinline" type="radio" value="valid" />
           <label cFormCheckLabel for="radioinline2">Hiệu lực</label>
         </c-form-check>
         <c-form-check inline>
-          <input cFormCheckInput disabled id="radioinline3" name="radioinline" type="radio" />
+          <input cFormCheckInput [(ngModel)]="searchValidity" name="radioinline" type="radio" value="expired" />
           <label cFormCheckLabel for="radioinline3">Hết hiệu lực (disabled)</label>
         </c-form-check>
       </div>
       <div style="text-align: center;">
-        <button cButton color="primary" variant="outline">Tìm kiếm</button>
+        <button cButton color="primary" variant="outline" (click)="searchCategories()">Tìm kiếm</button>
       </div>
     </div>
 
@@ -99,20 +99,19 @@
                     <th scope="col">Tên danh mục</th>
                     <th scope="col">Ngày hiệu lực</th>
                     <th scope="col">Ngày hết hiệu lực</th>
-
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let category of categories">
-                    <th scope="row">{{ category.id }}</th>
+                  <tr *ngFor="let category of filteredCategories; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
                     <td>
-                      <button mat-raised-button (click)="editCategory(category.id)" cButton color="primary">EDIT Danh muc</button>
+                      <button mat-raised-button (click)="editCategory(category.id)" cButton color="primary">EDIT</button>
                       <button cButton color="primary" (click)="deleteCategory(category.id)">Xóa</button>
                     </td>
                     <td>{{ category.code }}</td>
                     <td>{{ category.name }}</td>
-                    <td>{{ category.effective_date}}</td>
-                    <td>{{ category.expired_date}}</td>
+                    <td>{{ category.effective_date }}</td>
+                    <td>{{ category.expired_date }}</td>
                   </tr>
                 </tbody>
               </table>

@@ -3,7 +3,7 @@
   <div class="form-group">
     <label for="categoryType">Loại danh mục:</label>
     <select id="categoryType" [(ngModel)]="category.typeId" cFormControl>
-      <option *ngFor="let categoryType of categoryTypes" [value]="categoryType.id">{{ categoryType.name }}</option>
+      <option *ngFor="let categoryType of categoryTypes" [ngValue]="categoryType.id">{{ categoryType.name }}</option>
     </select>
   </div>
   <div class="form-group">
